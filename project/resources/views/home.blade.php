@@ -1289,7 +1289,7 @@ h6 {
 
          <!-- Start main image and the text below -->
          <div class="col-md-12 wow fadeIn" data-wow-delay="0.1s">
-              <img src="C:/xampp/htdocs/flower.jpg" alt="img" class="resp main-image" width="1200px" height="800px" />
+              <img src="https://github.com/190103386/AruzhanShamshayeva-profile-website/blob/main/project/resources/views/flower.jpg?raw=true" alt="img" class="resp main-image" width="1200px" height="800px" />
                  
                   <div class="hr"></div>
           </div>

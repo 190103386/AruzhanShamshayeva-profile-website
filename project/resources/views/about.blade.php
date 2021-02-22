@@ -90,7 +90,7 @@
              
              <!-- Start right image -->
              <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
-               <img src="C:/Users/Админ/Downloads/imgonline-com-ua-Black-White-YyUgGFtH306j22hn.jpg" alt="" class="photo-about" " /> 
+               <img src="https://github.com/190103386/AruzhanShamshayeva-profile-website/blob/main/project/resources/views/imgonline-com-ua-Black-White-YyUgGFtH306j22hn.jpg?raw=true" alt="" class="photo-about"  /> 
              </div>
              <!-- End right image -->
          </div>
