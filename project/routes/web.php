@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
+use App\Models\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,3 +27,15 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+Route::get('/post/create', function () {
+   DB::table('post')->insert([
+   'title'=>'Save Earth.',
+   'body'=>'Earth and the resources of earth make life possible on it. If we were to imagine our lives without these resources, that would not be possible. '
+   ]);
+});
+Route::get('/post', function () {
+   $post= Post::find(1);
+   return $post->body;
+});
+
