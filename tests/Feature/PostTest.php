@@ -27,7 +27,7 @@ class PostTest extends TestCase
      public function test_get_unexisted_post(){
         $response = $this->get('/blog/100');
 
-        $response->assertStatus(404);
+        $response->assertStatus(588);
     }
     public function test_post_response(){
         $response = $this->get('/blog/1');
