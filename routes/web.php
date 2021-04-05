@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\DB;
 
 use App\Models\Post;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\UploadFileController;
+use App\Http\Controllers\ImageUploadController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -46,3 +49,21 @@ Route::get('/blog/create', function () {
 });
 Route::post('/blog/create', [BlogController::class, 'store'])->name('add-blog');
 Route::get('/blog/{id}', [BlogController::class, 'get_blog']);
+
+Route::get('/form', function () {
+    return view('form');
+})->name('form');
+
+Route::get('/uploadfile','UploadFileController@index');
+Route::post('uploadfile','UploadFileController@showUploadFile');
+
+
+
+Route::get('image-upload', 'App\Http\Controllers\ImageUploadController@imageUpload')->name('image.upload');
+Route::post('image-upload', 'App\Http\Controllers\ImageUploadController@imageUploadPost')->name('image.upload.post');
+
+
+Route::get('/form', 'App\Http\Controllers\FormController@index');
+Route::post('/addimage', 'App\Http\Controllers\FormController@store')->name('addimage');
+
+Route::get('mail/send', 'App\Http\Controllers\MailController@send');
