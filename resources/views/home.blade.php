@@ -2,6 +2,12 @@
 <html lang="en">
 
     <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Home page</title>
+  <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
       <style >
    body {
   background-color: white;
@@ -1256,13 +1262,14 @@ h6 {
 
    </head>
    <body>
-   
+    @extends('layout')
+    @section('content')
    <!-- Start wrapper -->
    <div class="wrapper">
   	  <div class="col-md-12">
          <!-- Logo -->
-         <div class="brand wow fadeIn" data-wow-delay="0.1s">Shamshayeva Aruzhan
-           <div class="title"> - Welcome!!! -  </div>
+         <div class="brand wow fadeIn" data-wow-delay="0.1s">{{ __('lang.Shamshayeva Aruzhan')}}
+           <div class="title">{{ __('lang.Welcome')}}!!!</div>
          </div>
 
          <!-- Navigation -->
@@ -1284,15 +1291,16 @@ h6 {
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                    <li class="dropdown">
-                        <a href="{{route('home')}}"  >Home</a>
+                        <a href="{{route('home')}}">{{ __('lang.Home')}}</a>
                     </li>
                     <li>
-                       <a href="{{route('about')}}">About</a>
+                       <a href="{{route('about')}}">{{ __('lang.About')}}</a>
                     </li>
                     
                     <li>
-                      <a href="{{route('contact')}}">Contact</a>
+                      <a href="{{route('contact')}}">{{ __('lang.Contact')}}</a>
                     </li>
+                    
                 </ul>
             </div>
             <!-- /navbar-collapse -->
@@ -1301,7 +1309,7 @@ h6 {
 
          <!-- Start main image and the text below -->
          <div class="col-md-12 wow fadeIn" data-wow-delay="0.1s">
-              <img src="https://github.com/190103386/AruzhanShamshayeva-profile-website/blob/main/project/resources/views/flower.jpg?raw=true" alt="img" class="resp main-image" width="1200px" height="800px" />
+              <img src="{{asset('images/1617483329.jpg')}}" alt="img" class="resp main-image" width="1200px" height="800px" />
                  
                   <div class="hr"></div>
           </div>
@@ -1310,7 +1318,7 @@ h6 {
           <!-- Start left column -->
           <div class="box-home col-md-4 col-xs-offset-1">
                <h3>
-               <span class="text-left">I love the beauty of the world.</span>I surround myself with beautiful things. I discover in myself new facets of beauty and harmony. The love of life makes me wiser. I am a whole person. Quote for today: A constant sign of wisdom is to see the miraculous in the ordinary....... - Ralph Waldo Emerson -
+               <span class="text-left">{{ __('lang.I love the beauty of the world.')}}</span>{{ __('lang.I surround myself with beautiful things. I discover in myself new facets of beauty and harmony. The love of life makes me wiser. I am a whole person. Quote for today: A constant sign of wisdom is to see the miraculous in the ordinary....... - Ralph Waldo Emerson -')}}
                </h3>
           </div>
           <!-- End left column -->
@@ -1343,7 +1351,8 @@ h6 {
    <script>
    new WOW().init();
    </script>
+   
 
-
+@endsection
 </body>
 </html>

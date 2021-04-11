@@ -20,6 +20,8 @@ use App\Http\Controllers\ImageUploadController;
 |
 */
 
+
+
 Route::get('/welcome', function () {
     return view('welcome');
 });
@@ -63,7 +65,24 @@ Route::get('image-upload', 'App\Http\Controllers\ImageUploadController@imageUplo
 Route::post('image-upload', 'App\Http\Controllers\ImageUploadController@imageUploadPost')->name('image.upload.post');
 
 
+
+
+
 Route::get('/form', 'App\Http\Controllers\FormController@index');
 Route::post('/addimage', 'App\Http\Controllers\FormController@store')->name('addimage');
 
 Route::get('mail/send', 'App\Http\Controllers\MailController@send');
+
+
+Route::get('/form/{lang}', function ($lang){
+  App::setlocale($lang);
+    return view('/form');
+  });
+
+
+Route::get('/{lang}', function ($lang){
+  App::setlocale($lang);
+    return view('/home');
+  });
+
+Route::get('/{lang}','App\Http\Controllers\LocalizationController@index' );

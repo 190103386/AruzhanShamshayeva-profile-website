@@ -160,25 +160,27 @@ button {
 
         <div class="form-wrap">
   <div class="profile"><img src="https://html5book.ru/wp-content/uploads/2016/10/profile-image.png">
-    <h1>Register</h1>
+    <h1>{{ __('lang.Register')}}</h1>
   </div>
   <div class="container">
     <form action="{{route('addimage')}}" method="POST" enctype="multipart/form-data">
       {{csrf_field()}}
+            
+      
     <div>
-      <label for="name">Name</label>
+      <label for="name">{{ __('lang.Name')}}</label>
       <input type="text" name="Name" required>
     </div>
     <div>
-      <label for="name">Surname</label>
+      <label for="name" >{{ __('lang.Surname')}}</label>
       <input type="text" name="Surname" required>
     </div>
     <div>
-      <label for="email">Email</label>
+      <label for="email">{{ __('lang.Email')}}</label>
       <input type="email" name="Email" required>
     </div>
     <div>
-      <label for="country">Country</label>
+      <label for="country">{{ __('lang.Country')}}</label>
       <select name="Country">
         <option>Select your country of residence</option>
         <option value="Россия">Kazakhstan</option> 
@@ -195,7 +197,7 @@ button {
       </div>
       
     </div>
-    <button type="submit" name="submit" class="btn btn-success">Save data</button>
+    <button type="submit" name="submit" class="btn btn-success">{{ __('lang.Save data')}}</button>
     </form>
 </div>
 </div>

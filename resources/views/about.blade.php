@@ -1285,7 +1285,7 @@ h6 {
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="index.html" >Home</a>
+                        <a href="{{route('home')}}">Home</a>
                     </li>
                     <li class="active">
                        <a href="{{route('about')}}">About</a>
@@ -1323,7 +1323,7 @@ h6 {
              
              <!-- Start right image -->
              <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
-               <img src="https://github.com/190103386/AruzhanShamshayeva-profile-website/blob/main/project/resources/views/imgonline-com-ua-Black-White-YyUgGFtH306j22hn.jpg?raw=true" alt="" class="photo-about"  /> 
+               <img src="{{asset('images/1617482328.jpg')}}" alt="" class="photo-about"  /> 
              </div>
              <!-- End right image -->
          </div>
